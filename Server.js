@@ -9,12 +9,11 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const Pool = require("pg").Pool;
-
 const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "surveyjs",
-  password: "123456",
+  user: "imnfzwxldaivfh",
+  host: "ec2-34-200-106-49.compute-1.amazonaws.com",
+  database: "da7qumh28m93em",
+  password: "c43d758f0a9ed97a07463841907b22a49ce7cb13ec0b6b5141b918c97ab681e9",
   port: 5432,
 });
 // const get_json = () => {
