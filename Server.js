@@ -16,18 +16,30 @@ const pool = new Pool({
   password: "c43d758f0a9ed97a07463841907b22a49ce7cb13ec0b6b5141b918c97ab681e9",
   port: 5432,
 });
+
+// const pool = new Pool({
+//   user: "postgres",
+//   host: "localhost",
+//   database: "surveyjs",
+//   password: "123456",
+//   port: 5432,
+// });
+
 // const get_json = () => {
 //   return new Promise(function(resolve, reject) {
 
 // }
 
 app.get("/get_que", (req, res) => {
-  pool.query("SELECT json FROM surveys;", (error, results) => {
-    if (error) {
-      console.log(error);
+  pool.query(
+    "SELECT json FROM surveys where available = TRUE;",
+    (error, results) => {
+      if (error) {
+        console.log(error);
+      }
+      res.json({ data: results.rows });
     }
-    res.json({ data: results.rows });
-  });
+  );
 });
 
 let surveys = {};
