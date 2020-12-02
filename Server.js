@@ -9,11 +9,12 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const Pool = require("pg").Pool;
+
 const pool = new Pool({
-  user: "imnfzwxldaivfh",
-  host: "ec2-34-200-106-49.compute-1.amazonaws.com",
-  database: "da7qumh28m93em",
-  password: "c43d758f0a9ed97a07463841907b22a49ce7cb13ec0b6b5141b918c97ab681e9",
+  user: "qyexhdvayzluge",
+  host: "ec2-35-168-77-215.compute-1.amazonaws.com",
+  database: "d75jglndviaauf",
+  password: "c41091bb2f01f3f42f64f57b8721a104049c9987e47819da3ca7d223120c6e0f",
   port: 5432,
 });
 
