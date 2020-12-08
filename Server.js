@@ -12,7 +12,7 @@ const Pool = require("pg").Pool;
 
 const pool = new Pool({
   user: "hoalvaiuiinzfz",
-  host: "eec2-18-233-207-22.compute-1.amazonaws.com",
+  host: "ec2-18-233-207-22.compute-1.amazonaws.com",
   database: "df0b9kkga3b512",
   password: "fb0ef388ce38a3145f7eebe4722223000293e22c087f3ad9998e2b402c8f1ae3",
   port: 5432,
